@@ -1,19 +1,12 @@
 import { lazy, Fragment } from "react";
-import { Row, Col } from "antd";
-import i18n from "i18next";
+import { Row} from "antd";
 import { withTranslation } from "react-i18next";
-import Fade from "react-reveal/Fade";
 
 import * as S from "./styles";
 
 const SvgIcon = lazy(() => import("../../common/SvgIcon"));
-const Container = lazy(() => import("../../common/Container"));
 
 const Footer = ({ t }) => {
-  const handleChange = (event) => {
-    i18n.changeLanguage(event.target.value);
-  };
-
   const SocialLink = ({ href, src }) => {
     return (
       <a
@@ -31,6 +24,7 @@ const Footer = ({ t }) => {
   return (
     <Fragment>
             <Row>
+              <p style={{color: "white"}}>BUFFER</p>
               <S.FooterContainer>
                 <SocialLink
                   href="https://github.com/Adrinlol/create-react-app-adrinlol"
@@ -46,6 +40,7 @@ const Footer = ({ t }) => {
                 />
               </S.FooterContainer>
             </Row>
+            <hr style={{marginTop: "2.0em"}}></hr>
     </Fragment>
   );
 };

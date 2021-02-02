@@ -4,7 +4,6 @@ import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 import PartnershipContent from "../../content/PartnershipContent.json"
 
@@ -52,6 +51,7 @@ const Home = () => {
       type="left"
       title={PartnershipContent.title}
       content={PartnershipContent.text}
+      id="partnership"
       />
 
       <ContactFrom

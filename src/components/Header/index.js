@@ -32,10 +32,13 @@ const Header = ({ t }) => {
     return (
       <Fragment>
         <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <S.Span>{t("product")}</S.Span>
+          <S.Span>{t("Product")}</S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("social_impact")}>
-          <S.Span>{t("social_impact")}</S.Span>
+          <S.Span>{t("Social Impact")}</S.Span>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall onClick={() => scrollTo("partnership")}>
+          <S.Span>{t("Partnerships")}</S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
