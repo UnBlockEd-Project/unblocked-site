@@ -27,15 +27,15 @@ const Footer = ({ t }) => {
               <p style={{color: "white"}}>BUFFER</p>
               <S.FooterContainer>
                 <SocialLink
-                  href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                  href="https://github.com/"
                   src="github.svg"
                 />
                 <SocialLink
-                  href="https://twitter.com/Adrinlolx"
+                  href="https://twitter.com/"
                   src="twitter.svg"
                 />
                 <SocialLink
-                  href="https://www.linkedin.com/in/lasha-kakabadze/"
+                  href="https://www.linkedin.com/"
                   src="linkedin.svg"
                 />
               </S.FooterContainer>
