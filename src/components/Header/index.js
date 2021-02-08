@@ -7,6 +7,7 @@ import * as S from "./styles";
 
 const SvgIcon = lazy(() => import("../../common/SvgIcon"));
 const Button = lazy(() => import("../../common/Button"));
+const SecondButton = lazy(() => import("../../common/SecondButton"));
 
 const Header = ({ t }) => {
   const [isNavVisible] = useState(false);
@@ -35,7 +36,7 @@ const Header = ({ t }) => {
           <S.Span>{t("Product")}</S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("social_impact")}>
-          <S.Span>{t("Social Impact")}</S.Span>
+          <S.Span>{t("Social Equity")}</S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("partnership")}>
           <S.Span>{t("Partnerships")}</S.Span>
@@ -46,6 +47,17 @@ const Header = ({ t }) => {
         >
           <S.Span>
             <Button>{t("Contact")}</Button>
+          </S.Span>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall
+          style={{ width: "180px" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href='http://demo.bic-unblocked.org/';
+            }}
+        >
+          <S.Span>
+            <SecondButton>{t("Demo")}</SecondButton>
           </S.Span>
         </S.CustomNavLinkSmall>
       </Fragment>
