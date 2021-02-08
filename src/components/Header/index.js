@@ -51,6 +51,10 @@ const Header = ({ t }) => {
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href='http://demo.bic-unblocked.org/';
+            }}
         >
           <S.Span>
             <SecondButton>{t("Demo")}</SecondButton>

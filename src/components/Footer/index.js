@@ -31,11 +31,11 @@ const Footer = ({ t }) => {
                   src="github.svg"
                 />
                 <SocialLink
-                  href="https://twitter.com/"
+                  //href="https://twitter.com/"
                   src="twitter.svg"
                 />
                 <SocialLink
-                  href="https://www.linkedin.com/"
+                  //href="https://www.linkedin.com/"
                   src="linkedin.svg"
                 />
               </S.FooterContainer>
