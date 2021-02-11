@@ -22,6 +22,12 @@ const Footer = ({ t }) => {
   };
 
   return (
+  <div>
+    <p style={{paddingLeft: "20px"}}> Send your comments or questions to <a href="mailto:contact@bic-unblocked.org">contact@bic-unblocked.org</a></p>
+    <hr></hr>
+  </div>
+  );
+  {/*
     <Fragment>
             <Row>
               <p style={{color: "white"}}>BUFFER</p>
@@ -43,6 +49,7 @@ const Footer = ({ t }) => {
             <hr style={{marginTop: "2.0em"}}></hr>
     </Fragment>
   );
+    */}
 };
 
 export default withTranslation()(Footer);
