@@ -1,3 +1,4 @@
+
 import { lazy } from "react";
 import { Row, Col } from "antd";
 import Zoom from "react-reveal/Zoom";
@@ -41,7 +42,7 @@ const Contact = ({ title, content, id, t }) => {
                   type="text"
                   name="name"
                   id="Name"
-                  placeholder="Name"
+                  placeholder="Your Name"
                   value={values.name || ""}
                   onChange={handleChange}
                 />
@@ -52,7 +53,7 @@ const Contact = ({ title, content, id, t }) => {
                   type="text"
                   name="email"
                   id="Email"
-                  placeholder="Email"
+                  placeholder="Your Email"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
@@ -60,7 +61,7 @@ const Contact = ({ title, content, id, t }) => {
               </Col>
               <Col span={24}>
                 <TextArea
-                  placeholder="?"
+                  placeholder="Your Message"
                   value={values.message || ""}
                   name="message"
                   id="Message"
@@ -70,7 +71,7 @@ const Contact = ({ title, content, id, t }) => {
               </Col>
               <S.ButtonContainer>
                 <Button name="submit" type="submit">
-                  {t("Submit")}
+                  {("Submit")}
                 </Button>
               </S.ButtonContainer>
             </S.FormGroup>
@@ -81,4 +82,4 @@ const Contact = ({ title, content, id, t }) => {
   );
 };
 
-export default withTranslation()(Contact);
+export default (Contact);

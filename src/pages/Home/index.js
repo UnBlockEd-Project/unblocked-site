@@ -55,13 +55,11 @@ const Home = () => {
       id="partnership"
       />
 
-      {/*
       <ContactFrom
         title={ContactContent.title}
         content={ContactContent.text}
         id="contact"
       />
-      */}
     </Container>
   );
 };
