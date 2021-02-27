@@ -18,8 +18,8 @@ const useForm = (validate) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setErrors(validate(values));
-    console.log('I was triggered during render');
     if (Object.keys(values).length === 3) {
+      global.contact_submit = true;
       var template_id = "template_ej67mxy";
       var service_id = "default_service";
       var user_id = "user_Kz7Y51TTHpRVoymlRsDwg";

@@ -13,6 +13,7 @@ const Block = lazy(() => import("../Block"));
 const Input = lazy(() => import("../../common/Input"));
 const Button = lazy(() => import("../../common/Button"));
 const TextArea = lazy(() => import("../../common/TextArea"));
+global.contact_submit = false;
 
 const Contact = ({ title, content, id, t }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
@@ -27,7 +28,11 @@ const Contact = ({ title, content, id, t }) => {
       <S.Span />
     );
   };
-
+  if (global.contact_submit) {
+    return (
+      <p>Thank You!</p>
+    )
+  } else {
   return (
     <S.ContactContainer id={id}>
       <S.Contact>
@@ -80,6 +85,7 @@ const Contact = ({ title, content, id, t }) => {
       </S.Contact>
     </S.ContactContainer>
   );
+  }
 };
 
 export default (Contact);
