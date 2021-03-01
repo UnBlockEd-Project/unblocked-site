@@ -3,6 +3,7 @@ import { lazy } from "react";
 import { Row, Col } from "antd";
 import Zoom from "react-reveal/Zoom";
 import { withTranslation } from "react-i18next";
+import "./global.js";
 
 import useForm from "./useForm";
 import validate from "./validationRules";
@@ -28,11 +29,6 @@ const Contact = ({ title, content, id, t }) => {
       <S.Span />
     );
   };
-  if (global.contact_submit) {
-    return (
-      <p>Thank You!</p>
-    )
-  } else {
   return (
     <S.ContactContainer id={id}>
       <S.Contact>
@@ -75,7 +71,7 @@ const Contact = ({ title, content, id, t }) => {
                 <ValidationType type="message" />
               </Col>
               <S.ButtonContainer>
-                <Button name="submit" type="submit">
+                <Button disabled={global.formSubmit} name="submit" type="submit">
                   {("Submit")}
                 </Button>
               </S.ButtonContainer>
@@ -85,7 +81,6 @@ const Contact = ({ title, content, id, t }) => {
       </S.Contact>
     </S.ContactContainer>
   );
-  }
 };
 
 export default (Contact);

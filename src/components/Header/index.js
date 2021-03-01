@@ -55,7 +55,7 @@ const Header = ({ t }) => {
           style={{ width: "180px" }}
           onClick={(e) => {
             e.preventDefault();
-            window.location.href='http://demo.bic-unblocked.org/';
+            window.open('http://demo.bic-unblocked.org/', '_blank');
             }}
         >
           <S.Span>

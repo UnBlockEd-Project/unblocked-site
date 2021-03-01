@@ -51,6 +51,7 @@ const useForm = (validate) => {
   return {
     handleChange,
     handleSubmit,
+    useEffect,
     values,
     errors,
   };
