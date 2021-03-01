@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 import routes from "./config";
@@ -24,7 +23,6 @@ const Router = () => {
           );
         })}
       </Switch>
-      <Footer />
     </Suspense>
   );
 };

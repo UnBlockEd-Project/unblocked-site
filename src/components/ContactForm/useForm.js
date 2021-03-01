@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { notification } from "antd";
 import axios from "axios";
 import emailjs from 'emailjs-com';
+import {isContactSubmit} from '../../global';
 
 const useForm = (validate) => {
   const [values, setValues] = useState({});
@@ -16,10 +17,11 @@ const useForm = (validate) => {
   };
 
   const handleSubmit = (event) => {
+    console.log(event)
     event.preventDefault();
     setErrors(validate(values));
     if (Object.keys(values).length === 3) {
-      global.contact_submit = true;
+      isContactSubmit = true;
       var template_id = "template_ej67mxy";
       var service_id = "default_service";
       var user_id = "user_Kz7Y51TTHpRVoymlRsDwg";

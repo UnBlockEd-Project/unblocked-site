@@ -13,7 +13,7 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
-const Home = () => {
+var Home = () => {
   return (
     <Container>
       <ScrollToTop />
