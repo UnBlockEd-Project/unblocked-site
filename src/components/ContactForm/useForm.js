@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { notification } from "antd";
 import axios from "axios";
+import emailjs from 'emailjs-com';
+import {isContactSubmit} from '../../global';
 
 const useForm = (validate) => {
   const [values, setValues] = useState({});
@@ -15,18 +17,20 @@ const useForm = (validate) => {
   };
 
   const handleSubmit = (event) => {
+    console.log(event)
     event.preventDefault();
     setErrors(validate(values));
-    // Your url for API
-    const url = "";
     if (Object.keys(values).length === 3) {
-      axios
-        .post(url, {
-          ...values,
-        })
-        .then(() => {
-          setShouldSubmit(true);
-        });
+      isContactSubmit = true;
+      var template_id = "template_ej67mxy";
+      var service_id = "default_service";
+      var user_id = "user_Kz7Y51TTHpRVoymlRsDwg";
+      emailjs.send(service_id,template_id, values, user_id)
+      .then((response) => {
+       console.log('SUCCESS!', response.status, response.text);
+    }, (err) => {
+       console.log('FAILED...', err); 
+    });
     }
   };
 
@@ -49,6 +53,7 @@ const useForm = (validate) => {
   return {
     handleChange,
     handleSubmit,
+    useEffect,
     values,
     errors,
   };

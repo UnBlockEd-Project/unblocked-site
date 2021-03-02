@@ -41,7 +41,7 @@ const Header = ({ t }) => {
         <S.CustomNavLinkSmall onClick={() => scrollTo("partnership")}>
           <S.Span>{t("Partnerships")}</S.Span>
         </S.CustomNavLinkSmall>
-        {/*
+        
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
@@ -50,12 +50,12 @@ const Header = ({ t }) => {
             <Button>{t("Contact")}</Button>
           </S.Span>
         </S.CustomNavLinkSmall>
-        */}
+      
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={(e) => {
             e.preventDefault();
-            window.location.href='http://demo.bic-unblocked.org/';
+            window.open('http://demo.bic-unblocked.org/', '_blank');
             }}
         >
           <S.Span>
