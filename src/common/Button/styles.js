@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background: ${(props) => props.color || '#2e186a'};
+  background: ${(props) => props.disabled ? '#06f324' : props.color || '#2e186a'};
   color: ${(props) => (props.color ? '#2E186A' : '#fff')};
   font-size: 1rem;
   font-weight: 700;
@@ -10,7 +10,7 @@ export const Button = styled.button`
   border-radius: 8px;
   height: 60px;
   outline: none;
-  cursor: pointer;
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   margin-top: 0.625rem;
   max-width: 180px;
 
