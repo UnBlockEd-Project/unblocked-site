@@ -8,6 +8,7 @@ const useForm = (validate) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [shouldSubmit, setShouldSubmit] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const openNotificationWithIcon = (type) => {
     notification[type]({
@@ -56,6 +57,7 @@ const useForm = (validate) => {
     useEffect,
     values,
     errors,
+    sent,
   };
 };
 
