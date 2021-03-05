@@ -15,7 +15,7 @@ const Button = lazy(() => import("../../common/Button"));
 const TextArea = lazy(() => import("../../common/TextArea"));
 
 const Contact = ({ title, content, id, t }) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange, handleSubmit, sent } = useForm(validate);
 
   const ValidationType = ({ type }) => {
     const ErrorMessage = errors[type];
@@ -69,7 +69,7 @@ const Contact = ({ title, content, id, t }) => {
                   <ValidationType type="message" />
                 </Col>
                 <S.ButtonContainer>
-                  <Button name="submit" type="submit">
+                  <Button name="submit" type="submit" disabled={sent}>
                     {("Submit")}
                   </Button>
                 </S.ButtonContainer>
