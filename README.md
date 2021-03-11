@@ -14,3 +14,8 @@ The git ignore is configured for react, vs-code (this or web-storm are the recom
 
 If you dont have npm download it [here](https://www.npmjs.com/get-npm) or set it up via homebrew on OS X. In the working directory of the project run the terminal command **npm run start** or just **npm start** and the project will open up on the browser via localhost.
 
+## Workflow and Other Details
+
+https://youtu.be/6nE30_o9iWo
+
+
