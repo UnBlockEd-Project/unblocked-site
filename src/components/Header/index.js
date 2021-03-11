@@ -55,7 +55,7 @@ const Header = ({ t }) => {
           style={{ width: "180px" }}
           onClick={(e) => {
             e.preventDefault();
-            window.open('http://demo.bic-unblocked.org/', '_blank');
+            window.open('http://demo.bic-unblocked.org/articulate.html', '_blank');
             }}
         >
           <S.Span>
@@ -71,7 +71,7 @@ const Header = ({ t }) => {
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" />
+            <SvgIcon src="logo.svg" width="75" height="75" />
           </S.LogoContainer>
           <S.NotHidden>
             <MenuItem />

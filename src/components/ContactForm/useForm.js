@@ -8,6 +8,7 @@ const useForm = (validate) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [shouldSubmit, setShouldSubmit] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const openNotificationWithIcon = (type) => {
     notification[type]({
@@ -17,20 +18,24 @@ const useForm = (validate) => {
   };
 
   const handleSubmit = (event) => {
-    console.log(event)
+    console.log(event);
     event.preventDefault();
     setErrors(validate(values));
     if (Object.keys(values).length === 3) {
       isContactSubmit = true;
-      var template_id = "template_ej67mxy";
-      var service_id = "default_service";
-      var user_id = "user_Kz7Y51TTHpRVoymlRsDwg";
-      emailjs.send(service_id,template_id, values, user_id)
-      .then((response) => {
-       console.log('SUCCESS!', response.status, response.text);
-    }, (err) => {
-       console.log('FAILED...', err); 
-    });
+      const template_id = "template_ej67mxy";
+      const service_id = "default_service";
+      const user_id = "user_Kz7Y51TTHpRVoymlRsDwg";
+      emailjs.send(service_id, template_id, values, user_id).then(
+        (response) => {
+          openNotificationWithIcon("success");
+          setSent(true);
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
     }
   };
 
@@ -56,6 +61,7 @@ const useForm = (validate) => {
     useEffect,
     values,
     errors,
+    sent,
   };
 };
 

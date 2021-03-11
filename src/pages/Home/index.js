@@ -37,7 +37,7 @@ var Home = () => {
         title={AboutContent.title}
         content={AboutContent.text}
         section={AboutContent.section}
-        icon="product.png"
+        icon="product2.png"
         id="product"
       />
       <ContentBlock
